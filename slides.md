@@ -3,7 +3,7 @@ theme: jdan/cleaver-retro
 author:
   name: Квачук Григорий
   url: https://github.com/VCipher
-output: slides.html
+output: index.html
 
 --
 

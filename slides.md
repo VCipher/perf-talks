@@ -4,6 +4,7 @@ author:
   url: https://vcipher.github.com/perf-talks
 output: index.html
 style: style.css
+controls: false
 
 --
 
@@ -19,6 +20,7 @@ style: style.css
 ### Как выявить узкое место?
 
 * Требования к производительности
+
 * Характеристики производительности
 
 --
@@ -37,6 +39,7 @@ style: style.css
 |---------------|-------------------------------------------------------|--------------|
 | Веб-сервер    | Время на обработку запроса не более 300 мс            | Одновременно не более 300 запросов в секунду
 | Клиентское приложение | Время запуска не должно превышать 1500 мс     | 8 Гб оперативной памяти
+| Клиентское ПО | Нагрузка на ЦП в режиме простоя не должна превышать 1% | Процессор Intel Core i7 4790 3,6 ГГц или AMD FX-9590 4,7 ГГц 
 
 --
 
@@ -52,10 +55,70 @@ style: style.css
 
 --
 
-### Место производительности в цикле разработки
+### Производительность в цикле разработки ПО
 
 * Выделение требований по основным характеристикам производительности
 
 * Тестирование прототипов на этапе разработки
 
 * Нагрузочное тестирование системы перед каждым новым релизом
+
+--
+
+# 
+## Построение догадок и преждевременных выводов об узких местах в приложении -
+## **это самое худшее, что может сделать разработчик**
+
+--
+
+### Подходы к измерению производительности
+
+* Счетчики производительности (performance counters)
+
+* Различные профилировщики
+
+* Микрохронометраж (microbenchmarking)
+
+--
+
+### Счетчики производительности
+
+Windows Performance Counters (Утечка памяти)
+
+<center>
+    <img src="images/memory_leak.png">
+</center>
+
+--
+
+### Счетчики производительности
+
+```java
+public class Program
+{
+    // Создание категории счетчика
+    public static void CreateCounterCategory()
+    {
+        if (PerformanceCounterCategory.Exists("MyUsers"))
+            PerformanceCounterCategory.Delete("MyUsers");
+
+        CounterCreationDataCollection counters = new CounterCreationDataCollection
+        {
+            new CounterCreationData("# Пользователи онлайн", "Количество пользователей в приложении",
+                PerformanceCounterType.NumberOfItems32)
+        };
+
+        PerformanceCounterCategory.Create("MyUsers", "Информация о пользователях онлайн", counters);
+    }
+
+    // Метод запуска счетчика
+    public static void StartUpdatingCounters()
+    {
+        PerformanceCounter usersAtWork = new PerformanceCounter("MyUsers", "# Пользователи онлайн", false);
+
+        Timer updateTimer = new Timer(_ => usersAtWork.RawValue = MyUsers.UsersCount, 
+            null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
+    }
+}
+```
+---

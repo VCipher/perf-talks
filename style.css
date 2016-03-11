@@ -1,9 +1,25 @@
+table {
+	margin-top: 15px; 
+}
+
 table td {
 	min-width: 200px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 10px;
+}
+
+table tr {
+	border: 1px solid #ccc;
+}
+
+h2 {
+	font-size: 120%;
 }
 
 .progress {
 	z-index: 1000;
 }
+
+.slide-content {
+	width: 1100px;
+}
+

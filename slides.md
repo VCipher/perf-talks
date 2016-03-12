@@ -66,7 +66,7 @@ controls: false
 --
 
 # 
-## Построение догадок и преждевременных выводов об узких местах в приложении -
+## Построение догадок и преждевременных выводов о производительности приложения -
 ## **это самое худшее, что может сделать разработчик**
 
 --
@@ -75,19 +75,17 @@ controls: false
 
 * Счетчики производительности (performance counters)
 
-* Различные профилировщики
+* Профилировщики времени
+
+* Профилировщики памяти
 
 * Микрохронометраж (microbenchmarking)
 
---
+-- image-page
 
 ### Счетчики производительности
 
-Windows Performance Counters (Утечка памяти)
-
-<center>
-    <img src="images/memory_leak.png">
-</center>
+![](images/memory_leak.png)
 
 --
 
@@ -121,4 +119,39 @@ public class Program
     }
 }
 ```
----
+--
+
+### Профилирование времени
+
+StackExchange MiniProfiler [http://miniprofiler.com/](http://miniprofiler.com/)
+
+JetBrains dotTrace [https://www.jetbrains.com/profiler/](https://www.jetbrains.com/profiler/)
+
+-- image-page
+
+### Профилирование времени (MiniProfiler)
+
+![](images/mini-profiler-res.png)
+
+-- image-page
+
+### Профилирование времени (dotTrace)
+
+![](images/dot-trace-res.png)
+
+-- image-page
+
+### Профилирование памяти (dotMemory)
+
+
+
+-- image-page
+
+### Микрохронометраж (microbenchmarking)
+
+
+
+--
+
+### Нагрузочное тестирование
+

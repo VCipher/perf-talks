@@ -355,6 +355,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-weight: bold;
 }
 
+body {
+    font-size: 125%;
+}
+
 table {
 	margin-top: 15px; 
 }
@@ -377,12 +381,21 @@ h2 {
 }
 
 .slide-content {
-	width: 1100px;
+    width: 70%;
+    height: 80%;
 }
 
+/* custom slide styles */
+.image-page .slide-content > p {
+    text-align: center;
+}
+
+.image-page .slide-content img {
+    margin-top: 15px;
+    max-width: 100%;
+}
 
   </style>
-    <script async src="http://localhost:35729/livereload.js"></script>
 </head>
 <body>
     <div class="progress">
@@ -495,7 +508,7 @@ h2 {
   </div>
   <div class="slide hidden " id="slide-8">
     <section class="slide-content"><h1 id="-"> </h1>
-<h2 id="-">Построение догадок и преждевременных выводов об узких местах в приложении -</h2>
+<h2 id="-">Построение догадок и преждевременных выводов о производительности приложения -</h2>
 <h2 id="-"><strong>это самое худшее, что может сделать разработчик</strong></h2>
 </section>
   </div>
@@ -504,19 +517,19 @@ h2 {
 <ul>
 <li><p>Счетчики производительности (performance counters)</p>
 </li>
-<li><p>Различные профилировщики</p>
+<li><p>Профилировщики времени</p>
+</li>
+<li><p>Профилировщики памяти</p>
 </li>
 <li><p>Микрохронометраж (microbenchmarking)</p>
 </li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden " id="slide-10">
+  <div class="slide hidden  image-page" id="slide-10">
     <section class="slide-content"><h3 id="-">Счетчики производительности</h3>
-<p>Windows Performance Counters (Утечка памяти)</p>
-<center>
-    <img src="images/memory_leak.png">
-</center></section>
+<p><img src="images/memory_leak.png" alt=""></p>
+</section>
   </div>
   <div class="slide hidden " id="slide-11">
     <section class="slide-content"><h3 id="-">Счетчики производительности</h3>
@@ -548,10 +561,35 @@ h2 {
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden -" id="slide-12">
-    <section class="slide-content"></section>
+  <div class="slide hidden " id="slide-12">
+    <section class="slide-content"><h3 id="-">Профилирование времени</h3>
+<p>StackExchange MiniProfiler <a href="http://miniprofiler.com/"><a href="http://miniprofiler.com/">http://miniprofiler.com/</a></a></p>
+<p>JetBrains dotTrace <a href="https://www.jetbrains.com/profiler/"><a href="https://www.jetbrains.com/profiler/">https://www.jetbrains.com/profiler/</a></a></p>
+</section>
   </div>
-  <div class="slide hidden author-slide" id="slide-13">
+  <div class="slide hidden  image-page" id="slide-13">
+    <section class="slide-content"><h3 id="-miniprofiler-">Профилирование времени (MiniProfiler)</h3>
+<p><img src="images/mini-profiler-res.png" alt=""></p>
+</section>
+  </div>
+  <div class="slide hidden  image-page" id="slide-14">
+    <section class="slide-content"><h3 id="-dottrace-">Профилирование времени (dotTrace)</h3>
+<p><img src="images/dot-trace-res.png" alt=""></p>
+</section>
+  </div>
+  <div class="slide hidden  image-page" id="slide-15">
+    <section class="slide-content"><h3 id="-dotmemory-">Профилирование памяти (dotMemory)</h3>
+</section>
+  </div>
+  <div class="slide hidden  image-page" id="slide-16">
+    <section class="slide-content"><h3 id="-microbenchmarking-">Микрохронометраж (microbenchmarking)</h3>
+</section>
+  </div>
+  <div class="slide hidden " id="slide-17">
+    <section class="slide-content"><h3 id="-">Нагрузочное тестирование</h3>
+</section>
+  </div>
+  <div class="slide hidden author-slide" id="slide-18">
     <section class="slide-content"><div class="author">
   <h1 class="name">Квачук Григорий</h1>
     <h3 class="url">

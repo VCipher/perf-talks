@@ -133,6 +133,10 @@ JetBrains dotTrace [https://www.jetbrains.com/profiler/](https://www.jetbrains.c
 
 ![](images/mini-profiler-res.png)
 
+[http://adm-prog-51.partner.ru:9119/](http://adm-prog-51.partner.ru:9119/)
+
+[https://data.stackexchange.com/](https://data.stackexchange.com/)
+
 -- image-page
 
 ### Профилирование времени (dotTrace)
@@ -160,7 +164,6 @@ public void Main()
 }
 ```
 
-
 [https://github.com/PerfDotNet/BenchmarkDotNet](https://github.com/PerfDotNet/BenchmarkDotNet)
 
 -- microbenchmark
@@ -179,7 +182,8 @@ HostCLR=MS.NET 4.0.30319.42000, Arch=32-bit RELEASE
 |      Array |   323.1913 мкс  |  4.0372 мкс |
 | LinkedList | 2,354.5558 мкс  | 26.8252 мкс |
 
---
+-- image-page
 
 ### Нагрузочное тестирование
 
+![](images/vs-load-test.png)

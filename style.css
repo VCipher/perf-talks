@@ -37,3 +37,16 @@ h2 {
     margin-top: 15px;
     max-width: 100%;
 }
+
+.microbenchmark table {
+    margin-top: 15px;
+    font-size: 80%;    
+}
+
+.microbenchmark table td {
+    text-align: right;
+}
+
+.microbenchmark table td:first-child {
+    text-align: left;
+}

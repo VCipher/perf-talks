@@ -143,13 +143,41 @@ JetBrains dotTrace [https://www.jetbrains.com/profiler/](https://www.jetbrains.c
 
 ### Профилирование памяти (dotMemory)
 
+![](images/dot-memory-res.png)
 
-
--- image-page
+--
 
 ### Микрохронометраж (microbenchmarking)
 
+```java
+public void Main()
+{
+    var sw = Stopwatch.StartNew();
 
+    TestMethod();
+
+    Console.WriteLine(sw.Elapsed);
+}
+```
+
+
+[https://github.com/PerfDotNet/BenchmarkDotNet](https://github.com/PerfDotNet/BenchmarkDotNet)
+
+-- microbenchmark
+
+### Микрохронометраж (microbenchmarking)
+
+```ini
+OS=Microsoft Windows NT 6.1.7601 Service Pack 1
+Processor=Intel(R) Core(TM) i5-4440 CPU @ 3.10GHz, ProcessorCount=4
+Frequency=3026523 ticks, Resolution=330.4122 ns
+HostCLR=MS.NET 4.0.30319.42000, Arch=32-bit RELEASE
+
+```
+| Коллекция  |  Среднее        |  Разброс    |
+|----------- |---------------- |------------ |
+|      Array |   323.1913 мкс  |  4.0372 мкс |
+| LinkedList | 2,354.5558 мкс  | 26.8252 мкс |
 
 --
 

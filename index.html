@@ -395,7 +395,21 @@ h2 {
     max-width: 100%;
 }
 
+.microbenchmark table {
+    margin-top: 15px;
+    font-size: 80%;    
+}
+
+.microbenchmark table td {
+    text-align: right;
+}
+
+.microbenchmark table td:first-child {
+    text-align: left;
+}
+
   </style>
+    <script async src="http://localhost:35729/livereload.js"></script>
 </head>
 <body>
     <div class="progress">
@@ -579,17 +593,56 @@ h2 {
   </div>
   <div class="slide hidden  image-page" id="slide-15">
     <section class="slide-content"><h3 id="-dotmemory-">Профилирование памяти (dotMemory)</h3>
+<p><img src="images/dot-memory-res.png" alt=""></p>
 </section>
   </div>
-  <div class="slide hidden  image-page" id="slide-16">
+  <div class="slide hidden " id="slide-16">
     <section class="slide-content"><h3 id="-microbenchmarking-">Микрохронометраж (microbenchmarking)</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span><span class="hljs-params">()</span>
+</span>{
+    var sw = Stopwatch.StartNew();
+
+    TestMethod();
+
+    Console.WriteLine(sw.Elapsed);
+}</code></pre>
+<p><a href="https://github.com/PerfDotNet/BenchmarkDotNet"><a href="https://github.com/PerfDotNet/BenchmarkDotNet">https://github.com/PerfDotNet/BenchmarkDotNet</a></a></p>
 </section>
   </div>
-  <div class="slide hidden " id="slide-17">
+  <div class="slide hidden  microbenchmark" id="slide-17">
+    <section class="slide-content"><h3 id="-microbenchmarking-">Микрохронометраж (microbenchmarking)</h3>
+<pre><code class="lang-ini"><span class="hljs-attr">OS</span>=Microsoft Windows NT <span class="hljs-number">6.1</span>.<span class="hljs-number">7601</span> Service Pack <span class="hljs-number">1</span>
+<span class="hljs-attr">Processor</span>=Intel(R) Core(TM) i5-<span class="hljs-number">4440</span> CPU @ <span class="hljs-number">3.10</span>GHz, ProcessorCount=<span class="hljs-number">4</span>
+<span class="hljs-attr">Frequency</span>=<span class="hljs-number">3026523</span> ticks, Resolution=<span class="hljs-number">330.4122</span> ns
+<span class="hljs-attr">HostCLR</span>=MS.NET <span class="hljs-number">4.0</span>.<span class="hljs-number">30319.42000</span>, Arch=<span class="hljs-number">32</span>-bit RELEASE</code></pre>
+<table>
+<thead>
+<tr>
+<th>Коллекция</th>
+<th>Среднее</th>
+<th>Разброс</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>323.1913 мкс</td>
+<td>4.0372 мкс</td>
+</tr>
+<tr>
+<td>LinkedList</td>
+<td>2,354.5558 мкс</td>
+<td>26.8252 мкс</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+  <div class="slide hidden " id="slide-18">
     <section class="slide-content"><h3 id="-">Нагрузочное тестирование</h3>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-18">
+  <div class="slide hidden author-slide" id="slide-19">
     <section class="slide-content"><div class="author">
   <h1 class="name">Квачук Григорий</h1>
     <h3 class="url">

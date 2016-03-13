@@ -1,0 +1,6 @@
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\bin\Debug\MemoryLeak.exe.config
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\bin\Debug\MemoryLeak.exe
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\bin\Debug\MemoryLeak.pdb
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\obj\Debug\MemoryLeak.csprojResolveAssemblyReference.cache
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\obj\Debug\MemoryLeak.exe
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\obj\Debug\MemoryLeak.pdb

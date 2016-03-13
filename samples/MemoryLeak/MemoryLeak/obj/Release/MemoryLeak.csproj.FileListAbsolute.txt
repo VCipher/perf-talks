@@ -1,0 +1,5 @@
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\bin\Release\MemoryLeak.exe.config
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\bin\Release\MemoryLeak.exe
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\bin\Release\MemoryLeak.pdb
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\obj\Release\MemoryLeak.exe
+c:\users\kvachuk.g\documents\visual studio 2015\Projects\MemoryLeak\MemoryLeak\obj\Release\MemoryLeak.pdb
